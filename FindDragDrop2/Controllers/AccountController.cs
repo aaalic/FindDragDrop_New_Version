@@ -87,20 +87,15 @@ namespace FindDragDrop2.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpGet]
-        public ActionResult LogOut()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
         {
-            return View();
+            await signInManager.SignOutAsync();
+            
+            return RedirectToAction("Login", "Account");
         }
 
-        //[HttpPost]
-        //public ActionResult LogOut()
-        //{
-        //    var AuthenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-        //    AuthenticationManager.SignOut();
-
-        //    return RedirectToAction(nameof(Login));
-        //}
 
     }
 }

@@ -31,6 +31,7 @@ namespace FindDragDrop2.Controllers
             return View(model);
         }
 
+        [AllowAnonymous]
         public IActionResult GetItems()
         {
             var viewModel = context.GetAllItems();
