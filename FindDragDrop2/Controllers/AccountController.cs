@@ -37,10 +37,25 @@ namespace FindDragDrop2.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            //var result = await userManager.CreateAsync(
-            //new IdentityUser("admin"), "Password123!");
-
             return Content("Hejsan");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Create(LoginVM viewModel)
+        {
+            var result = await userManager.CreateAsync(
+            new IdentityUser(viewModel.Name), viewModel.Password);
+
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -49,8 +64,6 @@ namespace FindDragDrop2.Controllers
         {
             return View();
         }
-        //sdkjfsdkf
-     
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -70,7 +83,7 @@ namespace FindDragDrop2.Controllers
                 return View(viewModel);
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Home");
         }
     }
 }

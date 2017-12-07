@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FindDragDrop2.Models.Entities;
+using FindDragDrop2.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace FindDragDrop2.Controllers
 {
+    
     public class HomeController : Controller
     {
         FindDragDropContext context;
@@ -21,12 +24,12 @@ namespace FindDragDrop2.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-           
-            return View();
+            var model = new IndexVM
+            {
+                Name = User.Identity.Name //Read from auth cookie
+            };
+            return View(model);
         }
-        //hejhej
-
- //hdfjshfj
 
         public IActionResult GetItems()
         {
