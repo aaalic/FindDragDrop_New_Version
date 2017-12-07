@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FindDragDrop2.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FindDragDrop2.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         UserManager<IdentityUser> userManager;
@@ -38,6 +41,36 @@ namespace FindDragDrop2.Controllers
             //new IdentityUser("admin"), "Password123!");
 
             return Content("Hejsan");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+        //sdkjfsdkf
+     
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        public async Task<IActionResult> LogIn(LoginVM viewModel)
+        {
+            if (!ModelState.IsValid)
+                return View(viewModel);
+
+            var result = await signInManager.PasswordSignInAsync(
+                viewModel.Name, viewModel.Password, false, false); //Ifall användaren finns skapas kakan
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError(
+                    nameof(LoginVM.Name), "Invalid username or password");
+                return View(viewModel);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

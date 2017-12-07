@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="taskkill /F /IM dotnet.exe 2&gt;&amp;1 | exit /B 0" />
+  </Target>
+
 </Project>
