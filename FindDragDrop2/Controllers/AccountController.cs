@@ -50,7 +50,7 @@ namespace FindDragDrop2.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Create(LoginVM viewModel)
+        public async Task<IActionResult> Create(CreateVM viewModel)
         {
             var result = await userManager.CreateAsync(
             new IdentityUser(viewModel.Name), viewModel.Password);

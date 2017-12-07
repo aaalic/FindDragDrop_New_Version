@@ -1,28 +1,21 @@
 ﻿@model LoginVM
 
 <h1>Find, Drag & Drop</h1>
-<h2 id="name">Choose name and password to start game</h2>
-<form asp-controller="Account" asp-action="Login" style="text-align:center;">
-    <input asp-for="Name" placeholder="Write your name here" />
+<h2>Log in to play!</h2>
+<form asp-controller="Account" asp-action="Login" style="text-align:center">
+    <input asp-for="Name" placeholder="Write your name here" class="input" />
     <span asp-validation-for="Name"></span>
     <br />
-    <input asp-for="Password" placeholder="Write your password here" />
+    <br />
+    <input asp-for="Password" placeholder="Write your password here" class="input"/>
     <span asp-validation-for="Password"></span>
     <br />
     <br />
 
-    <input type="submit" value="Play" />
+    <input type="submit" value="Play" class="playButton"/>
+
 </form>
-
-<form asp-controller="Account" asp-action="Create" style="text-align:center;">
-    <input asp-for="Name" placeholder="Write your name here" />
-    <span asp-validation-for="Name"></span>
-    <br />
-    <input asp-for="Password" placeholder="Write your password here" />
-    <span asp-validation-for="Password"></span>
-    <br />
-    <br />
-
-    <input type="submit" value="Play" />
+<form action="/Account/Create" style="position:absolute; top:10px; left:10px;">
+    <input type="submit" value="Register" class="smallButton"/>
 </form>
 

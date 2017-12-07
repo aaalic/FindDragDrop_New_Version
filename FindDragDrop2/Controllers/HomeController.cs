@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FindDragDrop2.Controllers
 {
-    
+    [Authorize]
     public class HomeController : Controller
     {
         FindDragDropContext context;
