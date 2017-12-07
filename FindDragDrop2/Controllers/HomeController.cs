@@ -21,8 +21,14 @@ namespace FindDragDrop2.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            context.AddItem();
+           
             return View();
+        }
+
+        public IActionResult GetItems()
+        {
+            var viewModel = context.GetAllItems();
+            return PartialView("_Partial", viewModel);
         }
     }
 }

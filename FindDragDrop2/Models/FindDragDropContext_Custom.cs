@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FindDragDrop2.Models.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +9,25 @@ namespace FindDragDrop2.Models.Entities
 {
     public partial class FindDragDropContext
     {
+
         public FindDragDropContext(DbContextOptions<FindDragDropContext> c) : base(c)
         {
 
         }
 
-        public void AddItem()
+       
+        public IndexVM GetAllItems()
         {
-            Item.Add(new Entities.Item { Image = "test.jpg", Word = "ord" });
-            SaveChanges();
+            return new IndexVM
+            {
+                ItemList = Item
+                .Select(w => new ItemVM
+                {
+                    Image = w.Image,
+                    Word = w.Word
+                })
+                .ToArray()
+            };
         }
     }
 }

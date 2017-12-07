@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
     $.ajax({
-        url: "/Home/GetObjects",
+        url: "/Home/GetItems",
         type: "GET",
         success: function (result) {
             $("#myPartialContainer").html(result);
