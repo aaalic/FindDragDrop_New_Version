@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 
+
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace FindDragDrop2.Controllers
@@ -85,5 +86,21 @@ namespace FindDragDrop2.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public ActionResult LogOut()
+        {
+            return View();
+        }
+
+        //[HttpPost]
+        //public ActionResult LogOut()
+        //{
+        //    var AuthenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+        //    AuthenticationManager.SignOut();
+
+        //    return RedirectToAction(nameof(Login));
+        //}
+
     }
 }
