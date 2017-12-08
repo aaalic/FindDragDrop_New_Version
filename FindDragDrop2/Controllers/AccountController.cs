@@ -95,7 +95,7 @@ namespace FindDragDrop2.Controllers
                 return View(viewModel);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Menu", "Home");
         }
 
         [HttpPost]

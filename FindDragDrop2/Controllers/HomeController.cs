@@ -37,5 +37,16 @@ namespace FindDragDrop2.Controllers
             var viewModel = context.GetAllItems();
             return PartialView("_Partial", viewModel);
         }
+
+        public IActionResult Menu()
+        {
+            var model = new IndexVM
+            {
+                Name = User.Identity.Name //Read from auth cookie
+            };
+
+
+            return View(model);
+        }
     }
 }
