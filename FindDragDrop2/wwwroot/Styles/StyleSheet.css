@@ -6,12 +6,60 @@
 
 .draggable {
     width: 100px;
+    position: absolute;
 }
 
+/*Cup*/
 #dragFirst {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    width: 50px;
+    top: 205px;
+    right: 160px;
+}
+/*Fork*/
+#dragSecond {
+    transform: rotate(90deg);
+    top: 190px;
+    right: 30px;
+}
+/*Glas*/
+#dragThird {
+    width: 80px;
+    top: 29px;
+    left: 178px;
+}
+/*Knife*/
+#dragFourth {
+    transform: scaleX(-1);
+    width: 90px;
+    top: 150px;
+    left: 160px;
+}
+/*Plate*/
+#dragFifth {
+    top: 80px;
+    left: 125px;
+}
+/*Pot*/
+#dragSixth {
+    width: 120px;
+    top: 143px;
+    right: 510px;
+}
+/*Spoon*/
+#dragSeventh {
+    transform: rotate(10deg);
+    top: 168px;
+    right: 458px;
+}
+/*Basket*/
+#dragEigth {
+    top: 270px;
+    right: 0px;
+}
+/*Candle*/
+#dragNinth {
+    top: 120px;
+    left: 80px;
 }
 
 #container {
@@ -25,7 +73,11 @@
 
 h1 {
     text-align: center;
-    font-family: 'Rockwell Nova';
+    font-family: 'Bangers',cursive;
+    font-size: 70px;
+    letter-spacing: 4px;
+    margin-bottom:20px;
+    margin-top:20px;
 }
 
 #wordTable {
@@ -41,7 +93,6 @@ td {
 p {
     text-align: center;
     font-size: 14pt;
-    font-family: 'Gill Sans Nova';
 }
 
 body {
@@ -63,15 +114,15 @@ h2 {
 
 
 .input {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
     padding: 15px 25px;
     border-radius: 10px;
     width: 200px;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .playButton {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
@@ -84,6 +135,7 @@ h2 {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .smallButton {
@@ -100,5 +152,5 @@ h2 {
     border: none;
     border-radius: 15px;
     box-shadow: 0 5px #999;
-    width:100px;
+    width: 100px;
 }

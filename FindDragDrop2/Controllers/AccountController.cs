@@ -53,8 +53,19 @@ namespace FindDragDrop2.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Create(CreateVM viewModel)
         {
+            if (!ModelState.IsValid)
+                return View(viewModel);
+
             var result = await userManager.CreateAsync(
             new IdentityUser(viewModel.Name), viewModel.Password);
+
+            if(result.Succeeded)
+            {
+                var resultLogin = await signInManager.PasswordSignInAsync(
+               viewModel.Name, viewModel.Password, false, false);
+
+            }
+
 
             return RedirectToAction("Index", "Home");
         }
