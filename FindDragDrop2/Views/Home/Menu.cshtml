@@ -7,10 +7,21 @@
 
 </form>
 <h1>Find, Drag & Drop</h1>
-<h2 style="position:absolute; top:10px; right:10px;margin-top:0px;">Hello, @Model.Name</h2>
-<div id="container">
+<h2 style="position:absolute; top:10px; right:10px; margin-top:0px;">Hello, @Model.Name</h2>
+<div id="container" style="width:150px;">
 
-   <div id="menu"></div>
+    <div class="dropdown" style="text-align:center;">
+        <button onclick="myDropDownFunction()" class="dropbtn">Noun</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="/Home/Index">Kitchen</a>
+            <p class="disable">Bathroom 🔒</p>
+            <p class="disable">Livingroom</p>
+        </div>
+        <button onclick="myDropDownFunction()" class="dropbtn">Adjective</button>
+        <button onclick="myDropDownFunction()" class="dropbtn">Verb</button>
+    </div>
 
 </div>
+
+
 
