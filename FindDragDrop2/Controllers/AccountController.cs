@@ -34,12 +34,7 @@ namespace FindDragDrop2.Controllers
 
             //identityContext.Database.EnsureCreated();
         }
-
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return Content("Hejsan");
-        }
+       
 
         [HttpGet]
         [AllowAnonymous]
@@ -50,6 +45,7 @@ namespace FindDragDrop2.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [AllowAnonymous]
         public async Task<IActionResult> Create(CreateVM viewModel)
         {
@@ -61,13 +57,18 @@ namespace FindDragDrop2.Controllers
 
             if(result.Succeeded)
             {
-                var resultLogin = await signInManager.PasswordSignInAsync(
+               var resultLogin = await signInManager.PasswordSignInAsync(
                viewModel.Name, viewModel.Password, false, false);
 
             }
+            else
+            {
+                ModelState.AddModelError(
+                     nameof(CreateVM.Name), "The username is already taken");
+                return View(viewModel);
+            }
 
-
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Menu", "Home");
         }
 
         [HttpGet]
