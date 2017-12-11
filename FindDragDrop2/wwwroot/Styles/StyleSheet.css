@@ -63,7 +63,7 @@
     left: 55px;
 }
 
-#container {
+#container, #container2 {
     position: relative;
     width: 600px;
     margin: 0 auto;
@@ -71,6 +71,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 
 h1 {
     text-align: center;
@@ -217,7 +218,13 @@ h3 {
     background-color: seagreen;
 }
 
-
-
-
-
+#congratz {
+    position: absolute;
+    top: 0px;
+    margin-top: 0px;
+    font-size: 250px;
+    color: hotpink;
+    font-family: 'Bangers',cursive;
+    letter-spacing: 4px;
+    text-align: center;
+}

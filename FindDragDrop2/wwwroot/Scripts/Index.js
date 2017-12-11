@@ -175,8 +175,14 @@ function checkGameEnded() {
 
     console.log("wordCorrect: " + wordCorrect + " totalWords: " + totalWords);
 
-    if (wordCorrect === totalWords) {
+    if (wordCorrect === 2) {
+
+        document.getElementById("congratz").innerHTML = "Great Job!";
        
+        $('#congratz').effect("shake", 1000);
+
+        $('#container').hide();
+
         (function ($) {
             //
             // Zachary Johnson (@zacharyjohnson, zachstronaut.com)
