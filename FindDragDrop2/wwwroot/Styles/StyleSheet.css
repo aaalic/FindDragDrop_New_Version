@@ -95,6 +95,7 @@ td {
 p {
     text-align: center;
     font-size: 14pt;
+    color: black;
 }
 
 body {
@@ -215,7 +216,7 @@ h3 {
 }
 
 .wordDone {
-    background-color: seagreen;
+    background-color: #30733a;
 }
 
 #congratz {
