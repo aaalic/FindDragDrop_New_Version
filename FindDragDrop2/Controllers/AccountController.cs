@@ -45,7 +45,6 @@ namespace FindDragDrop2.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         [AllowAnonymous]
         public async Task<IActionResult> Create(CreateVM viewModel)
         {
@@ -57,7 +56,7 @@ namespace FindDragDrop2.Controllers
 
             if(result.Succeeded)
             {
-               var resultLogin = await signInManager.PasswordSignInAsync(
+                var resultLogin = await signInManager.PasswordSignInAsync(
                viewModel.Name, viewModel.Password, false, false);
 
             }
