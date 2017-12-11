@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $(document.body).hide();
+
     $.ajax({
         url: "/Home/GetItems",
         type: "GET",
@@ -15,7 +16,8 @@
                 $("#dropFirst").droppable({
                     scope: "first",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -31,7 +33,8 @@
                 $("#dropSecond").droppable({
                     scope: "second",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -46,7 +49,8 @@
                 $("#dropThird").droppable({
                     scope: "third",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -61,7 +65,8 @@
                 $("#dropFourth").droppable({
                     scope: "fourth",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -76,7 +81,8 @@
                 $("#dropFifth").droppable({
                     scope: "fifth",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -91,7 +97,8 @@
                 $("#dropSixth").droppable({
                     scope: "sixth",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -106,7 +113,8 @@
                 $("#dropSeventh").droppable({
                     scope: "seventh",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -121,7 +129,8 @@
                 $("#dropEigth").droppable({
                     scope: "eigth",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -136,7 +145,8 @@
                 $("#dropNinth").droppable({
                     scope: "ninth",
                     drop: function (event, ui) {
-                        $(this).css("background-color", "SeaGreen")
+                        $(this).addClass("wordDone");
+                        checkGameEnded();
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -154,9 +164,22 @@
 
     $(document.body).show();
 
-    
+
 
 });
+
+function checkGameEnded() {
+    var wordCorrect = $("td.wordDone").length;
+
+    var totalWords = $("td.droppable").length;
+
+    console.log("wordCorrect: " + wordCorrect + " totalWords: " + totalWords);
+
+    if (wordCorrect === 2) {
+       
+        alert("YOU WIN!!");
+    }
+}
 
 
 
