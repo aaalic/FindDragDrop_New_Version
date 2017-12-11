@@ -25,7 +25,11 @@ namespace FindDragDrop2
 
 
             services.AddDbContext<IdentityDbContext>(o => o.UseSqlServer(connString));
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<IdentityUser, IdentityRole>(o =>
+            {
+                o.Password.RequireNonAlphanumeric = false;
+                o.Password.RequiredLength = 6;
+            })
             .AddEntityFrameworkStores<IdentityDbContext>()
             .AddDefaultTokenProviders();
 
