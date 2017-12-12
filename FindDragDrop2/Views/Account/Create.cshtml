@@ -1,5 +1,7 @@
 ﻿@model CreateVM
 
+
+
 <form action="/Account/Login" style="position:absolute; top:30px; left:40px;">
     <input type="submit" value="Back" class="smallButton" />
 </form>
@@ -7,14 +9,14 @@
 <h2 id="name">Choose name and password to start game</h2>
 
 <form asp-controller="Account" asp-action="Create" style="text-align:center;">
-    <input asp-for="Name" placeholder="Write your name here" class="input"/>
+    <input asp-for="Name" placeholder="Write your name here" class="input" />
     <span asp-validation-for="Name"></span>
     <br />
     <br />
-    <input asp-for="Password" placeholder="Write your password here" class="input"/>
+    <input asp-for="Password" placeholder="Write your password here" class="input" />
     <span asp-validation-for="Password"></span>
     <br />
     <br />
 
-    <input type="submit" value="Play" class="playButton"/>
+    <input type="submit" value="Play" class="playButton" />
 </form>
