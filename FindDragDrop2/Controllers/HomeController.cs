@@ -45,6 +45,13 @@ namespace FindDragDrop2.Controllers
             return PartialView("_PartialSE", viewModel);
         }
 
+        [AllowAnonymous]
+        public IActionResult GetLVItems()
+        {
+            var viewModel = context.GetAllItems();
+            return PartialView("_PartialLV", viewModel);
+        }
+
         public IActionResult Menu()
         {
             var model = new IndexVM
