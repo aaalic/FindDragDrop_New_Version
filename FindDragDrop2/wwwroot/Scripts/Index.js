@@ -175,7 +175,7 @@ function checkGameEnded() {
 
     console.log("wordCorrect: " + wordCorrect + " totalWords: " + totalWords);
 
-    if (wordCorrect === 2) {
+    if (wordCorrect === totalWords) {
 
         document.getElementById("congratz").innerHTML = "Great Job!";
        
