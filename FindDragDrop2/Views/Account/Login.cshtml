@@ -1,23 +1,22 @@
 ﻿@model LoginVM
 
-    <form action="/Account/Create" style="position:absolute; top:30px; left:40px;">
-        <input type="submit" value="Register" class="smallButton" />
-    </form>
+<form action="/Account/Create" style="position:absolute; top:30px; left:40px;">
+    <input type="submit" value="Register" class="smallButton" />
+</form>
 
-    <h1>Find, Drag & Drop</h1>
-    <h2>Log in to play!</h2>
-    <form asp-controller="Account" asp-action="Login" style="text-align:center">
-        <input asp-for="Name" placeholder="Write your name here" class="input" />
-        <span asp-validation-for="Name"></span>
-        <br />
-        <br />
-        <input asp-for="Password" placeholder="Write your password here" class="input" />
-        <span asp-validation-for="Password"></span>
-        <br />
-        <br />
+<h1>Find, Drag & Drop</h1>
+<h2>Log in to play!</h2>
+<form asp-controller="Account" asp-action="Login" style="text-align:center">
+    <input asp-for="Name" placeholder="Write your name here" class="input" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <br />
+    <input asp-for="Password" placeholder="Write your password here" class="input" />
+    <span asp-validation-for="Password"></span>
+    <br />
+    <br />
 
-        <input type="submit" value="Play" class="playButton" />
-
-    </form>
+    <input type="submit" value="Play" class="playButton" />
+</form>
 
 

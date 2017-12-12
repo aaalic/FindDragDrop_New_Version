@@ -59,7 +59,6 @@ namespace FindDragDrop2.Controllers
                 Name = User.Identity.Name //Read from auth cookie
             };
 
-
             return View(model);
         }
 

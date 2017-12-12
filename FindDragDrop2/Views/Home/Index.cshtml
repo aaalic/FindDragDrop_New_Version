@@ -7,24 +7,25 @@
 <form asp-controller="Home" asp-action="Menu" style="position:absolute; top:90px; left:40px;">
     <input type="submit" value="Menu" class="smallButton" />
 </form>
+<form asp-controller="Home" asp-action="Menu" id="nextButton" style="position:absolute; bottom:40px; right:40px;">
+    <input type="submit" value="Next" class="smallButton" />
+</form>
+
 <h1>Find, Drag & Drop</h1>
 <h3 style="position:absolute; top:30px; right:40px;margin-top:0px;">Hello, @Model.Name</h3>
+
 <div id="container">
 
     <div id="main_image"></div>
 
     <div id="myPartialContainer"></div>
-
-    
 </div>
+
 <div id="container3">
-
     <form asp-controller="Home" asp-action="Index">
-
         <input type="button" value="English" id="buttonENG" class="dropbtn" />
         <input type="button" value="Swedish" id="buttonSE" class="dropbtn" />
         <input type="button" value="Latvian" id="buttonLV" class="dropbtn" />
-
     </form>
 </div>
 
@@ -32,11 +33,7 @@
     <p id="congratz"></p>
 </div>
 
-<form asp-controller="Home" asp-action="Menu" id="nextButton" style="position:absolute; bottom:40px; right:40px;">
 
-    <input type="submit" value="Next" class="smallButton" />
-
-</form>
 
 
 
