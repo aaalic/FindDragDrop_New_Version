@@ -525,6 +525,9 @@ function checkGameEnded() {
 
     if (wordCorrect === totalWords) {
 
+        var audio = new Audio('/Audio/cheer.wav');
+        audio.play();
+
         document.getElementById("congratz").innerHTML = "Great Job!";
 
         $('#container').hide();
