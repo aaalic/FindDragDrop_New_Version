@@ -9,5 +9,7 @@ namespace FindDragDrop2.Models.ViewModels
     {
         public string Image { get; set; }
         public string Word { get; set; }
+        public string WordSE { get; set; }
+        public string WordLV { get; set; }
     }
 }

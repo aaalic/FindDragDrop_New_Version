@@ -1,8 +1,15 @@
 ﻿$(document).ready(function () {
-    $(document.body).hide();
+   
+
+    $('#buttonSE').click(function () {
+
+
+        $(document.body).hide();
+        $('#nextButton').hide();
+
 
     $.ajax({
-        url: "/Home/GetItems",
+        url: "/Home/GetSEItems",
         type: "GET",
         success: function (result) {
             $("#myPartialContainer").html(result);
@@ -164,7 +171,7 @@
 
     $(document.body).show();
 
-
+    });
 
 });
 
@@ -182,6 +189,7 @@ function checkGameEnded() {
         $('#congratz').effect("shake", 1000);
 
         $('#container').hide();
+        $('#nextButton').show();
 
         (function ($) {
             //

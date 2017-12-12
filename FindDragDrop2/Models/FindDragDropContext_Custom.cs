@@ -24,7 +24,9 @@ namespace FindDragDrop2.Models.Entities
                 .Select(w => new ItemVM
                 {
                     Image = w.Image,
-                    Word = w.Word
+                    Word = w.Word,
+                    WordSE = w.WordSe,
+                    WordLV = w.WordLv
                 })
                 .ToArray()
             };

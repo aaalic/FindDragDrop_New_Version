@@ -38,6 +38,13 @@ namespace FindDragDrop2.Controllers
             return PartialView("_Partial", viewModel);
         }
 
+        [AllowAnonymous]
+        public IActionResult GetSEItems()
+        {
+            var viewModel = context.GetAllItems();
+            return PartialView("_PartialSE", viewModel);
+        }
+
         public IActionResult Menu()
         {
             var model = new IndexVM
@@ -48,5 +55,7 @@ namespace FindDragDrop2.Controllers
 
             return View(model);
         }
+
+       
     }
 }

@@ -32,6 +32,16 @@ namespace FindDragDrop2.Models.Entities
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
+
+                entity.Property(e => e.WordLv)
+                    .HasColumnName("WordLV")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.WordSe)
+                    .HasColumnName("WordSE")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
         }
     }
