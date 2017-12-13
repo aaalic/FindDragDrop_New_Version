@@ -24,6 +24,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -41,6 +45,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -57,6 +65,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -73,6 +85,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -89,6 +105,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -105,6 +125,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -121,6 +145,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -137,6 +165,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -153,6 +185,10 @@
                     drop: function (event, ui) {
                         $(this).addClass("wordDone");
                         checkGameEnded();
+
+                        var audio = new Audio('/Audio/correct.mp3');
+                        audio.play();
+
                     },
                     out: function (event, ui) {
                         $(this).css("background-color", "")
@@ -194,6 +230,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -211,6 +251,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -227,6 +271,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -243,6 +291,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -259,6 +311,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -275,6 +331,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -291,6 +351,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -307,6 +371,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -323,6 +391,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -364,6 +436,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -381,6 +457,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -397,6 +477,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -413,6 +497,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -429,6 +517,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -445,6 +537,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -461,6 +557,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -477,6 +577,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
@@ -493,6 +597,10 @@
                         drop: function (event, ui) {
                             $(this).addClass("wordDone");
                             checkGameEnded();
+
+                            var audio = new Audio('/Audio/correct.mp3');
+                            audio.play();
+
                         },
                         out: function (event, ui) {
                             $(this).css("background-color", "")
