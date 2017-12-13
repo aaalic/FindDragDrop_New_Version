@@ -18,17 +18,21 @@ namespace FindDragDrop2
     public class Startup
     {
 
-        IConfiguration conf;
+        //IConfiguration conf;
 
-        public Startup(IConfiguration conf)
-        {
-            this.conf = conf;
-        }
+        //public Startup(IConfiguration conf)
+        //{
+        //    this.conf = conf;
+        //}
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connString = conf["connString"];
+            //var connString = conf["connString"];
+
+            var connString = "Data Source=finddragdrop.database.windows.net;Initial Catalog=FindDragDropDB;Integrated Security=False;User ID=fridaochsimona;Password=Simona_Frida!;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
             services.AddDbContext<FindDragDropContext>(o => o.UseSqlServer(connString));
 
 
