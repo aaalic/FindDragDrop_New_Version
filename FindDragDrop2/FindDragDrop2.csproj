@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Audio\" />
+    <Folder Include="wwwroot\Favicon\" />
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
